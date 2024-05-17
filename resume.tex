@@ -18,15 +18,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
-\usepackage{ragged2e}
 
-\usepackage{xcolor}
-\hypersetup{colorlinks,urlcolor=blue}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -37,7 +30,7 @@
 
 % serif
 % \usepackage{CormorantGaramond}
-\usepackage{charter}
+% \usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -47,11 +40,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -61,7 +54,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -75,22 +68,10 @@
   }
 }
 
-\newcommand{\achievementItem}[1]{
-  \item\small{
-    {#1 \vspace{-6pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -104,20 +85,19 @@
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2} \\
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\justify \begin{itemize} \vspace{-4pt}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -126,22 +106,11 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
-
-
 \begin{center}
-    {\Huge \scshape Tarun Bisht} \\ \vspace{1pt}
-    % 123 Street Name, Town, State 12345 \\ 
-    \vspace{5pt}
-    \small \raisebox{-0.1\height}\faPhone\ 9872779838 ~ 
-    \raisebox{-0.2\height}\faEnvelope\ \href{mailto:bishttarun2002@gmail.com}{ bishttarun2002@gmail.com} ~ 
-    \raisebox{-0.2\height}\faLinkedin\ \href{https://www.linkedin.com/in/tarunbisht24/}{ linkedin.com/in/tarunbisht24} ~
-    \raisebox{-0.2\height}\faGithub\ \href{https://github.com/tarunbisht-24}{ github.com/tarunbisht-24} ~
-    \vspace{-8pt}
+    \textbf{\Huge \scshape Tarun Bisht} \\ \vspace{1pt}
+    \small +91-9872779838 $|$ \href{mailto:bishttarun2002@gmail.com}{bishttarun2002@gmail.com} $|$ 
+    \href{https://www.linkedin.com/in/tarunbisht24/}{{\underline{linkedin.com/in/tarunbisht24}}} $|$
+    \href{https://github.com/tarunbisht-24}{\underline{github.com/tarunbisht-24}}
 \end{center}
 
 
@@ -151,9 +120,10 @@
     \resumeSubheading
       {Chandigarh University}{Sep '20 -- Jul '24}
       {Bachelor of Engineering in Computer Science}{Punjab, India}
-    \resumeItemListStart
-      \resumeItem{Cumulative CGPA : \textbf{7.96}}
-    \resumeItemListEnd
+      \resumeItemListStart
+        \resumeItem{Cumulative CGPA : \textbf{7.96}}
+        % \resumeItem{Relevant Coursework: Data Structures and Algorithms, Design and Analysis of Algorithms, Object Oriented Programming, Operating System, Database Management System, Computer Networking}
+      \resumeItemListEnd
     \resumeSubheading
       {Govt.Model.Senior.Secondary.School}{May '20}
       {XII (CBSE) $|$ Percentage : \textbf{89.6}}{Chandigarh, India}
@@ -162,79 +132,108 @@
       {X (CBSE) $|$ Percentage : \textbf{82.6}}{Chandigarh, India}
   \resumeSubHeadingListEnd
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    {\item{
-     \textbf{Programming Languages}{: C++, C, Java, SQL, Javascript} \\
-     \vspace{1pt}
-     \textbf{Frameworks and Libraries}{: React.js, Tailwind CSS, Bootstrap, jQuery, EJS} \\
-     \vspace{1pt}
-     \textbf{Technologies}{: HTML, CSS, Node.js, REST API} \\
-     \vspace{1pt}
-     \textbf{Tools}{: Git, Linux, Google Cloud Platform} \\
-    }}
- \end{itemize}
- \vspace{-16pt}
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {LET'S GROW MORE}{May '22 -- Aug '22}
+      {Web Developer Intern}{Remote}
+          \resumeItemListStart
+            \resumeItem{Designed responsive UI/UX for apps, which led to a surge in cross-device usage.}
+            \resumeItem{Constructed auto-fill search bar from scratch excluding dependency on libraries such as Bootstrap for 2 different
+            use cases.}
+            \resumeItem{Enhanced functionality and design of projects using web development technologies like HTML, CSS, JavaScript,
+             etc.}
+             \resumeItem{Produced and maintained web applications using various technologies, increasing user engagement.}
+             % \resumeItem{Helped with programming utility functions to reduce code repetition.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \vspace{-2pt}
     \resumeSubHeadingListStart
-        \resumeProjectHeading
-            {\textbf{Evently} $|$ \href{https://chat-gpt-enhanced.web.app/}{Live} $|$ \href{https://github.com/tarunbisht-24/chatgpt-enhanced}{Code}}{}
-            \resumeItemListStart
-                \resumeItem{Devised an event organization web app similar to Eventbrite with \textbf{NextJS}, \textbf{React} and \textbf{Mongoose}  for robust backend operations, ensuring scalability and reliability of the application.}
-                \resumeItem{Implemented \textbf{dynamic event creation} and management features, allowing users to easily create, update, and delete events, enhancing the \textbf{platform's flexibility} and user-generated content.}
-                \resumeItem{Utilized \textbf{Stripe} for secure and efficient checkout and payment processing, facilitating \textbf{seamless transactions} within the platform.}
-                \resumeItem{Incorporated a \textbf{responsive design} approach using \textbf{Tailwind CSS}, ensuring optimal performance across various devices, enriching accessibility and user engagement.}
-            \resumeItemListEnd
-     
-        \resumeProjectHeading
-            {\textbf{CHATGPT 2.0} $|$ \href{https://chat-gpt-enhanced.web.app/}{Live} $|$ \href{https://github.com/tarunbisht-24/chatgpt-enhanced}{Code}}{}
-            \resumeItemListStart
-                \resumeItem{Developed a better version of ChatGPT which gives accurate results of user query with the help of \textbf{Open AI} API’s using \textbf{React} for frontend.}
-                \resumeItem{Created \textbf{refine prompt} that can perform a better task as a coding prompt can only be used to generate coding responses.}
-                \resumeItem{Achieved an accuracy of \textbf{87\%} in response prediction and a user satisfaction level of \textbf{95\%}, providing a seamless \textbf{user experience}.}
-            \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{CHATGPT 2.0 $|$ \href{https://chat-gpt-enhanced.web.app/}{Live} $|$ \href{https://github.com/tarunbisht-24/chatgpt-enhanced}{Code}}}  
+          
+          \resumeItemListStart
+            \resumeItem{Developed a better version of ChatGPT which gives accurate results of user query with the help of \textbf{Open AI API's} using \textbf{React} for frontend.}
+            \resumeItem{Devised \textbf{refine prompts} that can perform a better task as a coding prompt can only be used to generate coding responses.}
+            \resumeItem{Achieved an accuracy of \textbf{87\%} in response prediction and a user satisfaction level of \textbf{95\%}, providing a seamless \textbf{user experience}.}
+          \resumeItemListEnd
+      
+     \resumeProjectHeading
+          {\textbf{WALLETH $|$ \href{https://kryptether.netlify.app/}{Live} $|$ \href{https://github.com/tarunbisht-24/walleth}{Code}}}
 
-        \resumeProjectHeading
-            {\textbf{WALLETH} $|$ \href{https://kryptether.netlify.app/}{Live} $|$ \href{https://github.com/tarunbisht-24/walleth}{Code}}{}
-            \resumeItemListStart
-                \resumeItem{Launched a Web 3.0 Application that allows users to send transactions through the \textbf{Blockchain} using \textbf{React} and \textbf{Solidity.}}
-                \resumeItem{Users can send \textbf{Ethereum} through the blockchain network and visit their transaction history.}
-                \resumeItem{Generated API and \textbf{automated transactional} processes, improving the speed of transactions by \textbf{40\%.}}
-            \resumeItemListEnd
-    \resumeSubHeadingListEnd
+          \resumeItemListStart
+            \resumeItem{Launched a Web 3.0 Application that allows users to send transactions through the \textbf{Blockchain} using \textbf{React} and \textbf{Solidity}.}
+            \resumeItem{Users can send \textbf{Ethereum} through the blockchain network and visit their transaction history.}
+            \resumeItem{Generated API and \textbf{automated transactional} processes, improving the speed of transactions by \textbf{40\%}.}
+          \resumeItemListEnd
 
-%-----------OPEN SOURCE CONTRIBUTION-----------
-\section{Open Source Contribution}
-    \vspace{-2pt}
-    \resumeSubHeadingListStart
-        \resumeProjectHeading
-            {\textbf{HACKTOBERFEST \& GSSOC \& GWOC(21,22 \& 23)}}{}
-            \resumeItemListStart
-                \resumeItem{Applied in GSOC 2023 in WikiMedia Org $|$ \href{https://drive.google.com/file/d/1IqJIXQrejbJIcjW4Dsw8XEoECDTCQe7H/view?usp=sharing}{My Proposal}}
-                \resumeItem{Contributed to various open-source projects with 10+ successful merged PRs in many repos.}
-                \resumeItem{Helped with programming utility functions to reduce code repetition.}
-                \resumeItem{Enhanced functionality and design of open-source projects using web development technologies (HTML, CSS, JavaScript, etc.)}
-            \resumeItemListEnd
+     \resumeProjectHeading
+          {\textbf{ONLINE VOTING SYSTEM $|$ \href{https://online-voting-system.herokuapp.com/}{Live} $|$ \href{https://github.com/tarunbisht-24/Online-Voting-System}{Code}}}
+
+          \resumeItemListStart
+            \resumeItem{Introduced a Web App with a back-end on \textbf{PHP} \& \textbf{MySQL} database and front-end using \textbf{HTML, CSS, Javascript and Bootstrap}.}
+            \resumeItem{Added feature \textbf{login/signup} for voters or admin to vote according to their choice in the E-voting system.}
+            \resumeItem{Enabled full access to the admin in the case of any \textbf{discrepancy} during the election.}
+          \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
-%-----------INVOLVEMENT---------------
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: C++, C, Java, SQL, Javascript} \\
+     \textbf{Frameworks and Libraries}{: React.js, Tailwind CSS, Bootstrap, jQuery, EJS} \\
+     \textbf{Technologies}{: HTML, CSS, Node.js, REST API}\\
+     \textbf{Tools}{: Git, Linux, Google Cloud Platform}
+    }}
+ \end{itemize}
+
+
+% %-----------OPEN SOURCE CONTRIBUTION-----------
+% \section{Open Source Contribution}
+%     \resumeSubHeadingListStart
+%       \resumeProjectHeading
+%          {\textbf{HACKTOBERFEST \& GSSOC \& GWOC(21,22\&23)}}
+          
+%           \resumeItemListStart
+%             \resumeItem{Applied in GSOC 2023 in WikiMedia Org $|$ \href{https://drive.google.com/file/d/1IqJIXQrejbJIcjW4Dsw8XEoECDTCQe7H/view?usp=sharing}{My Proposal}}
+%             \resumeItem{Contributed to various open-source projects with 10+ successful merged PRs in many repos.}
+%             \resumeItem{Helped with programming utility functions to reduce code repetition.}
+%             \resumeItem{Enhanced functionality and design of open-source projects using web development technologies (HTML, CSS, JavaScript, etc.).}
+%           \resumeItemListEnd
+    
+%     \resumeSubHeadingListEnd
+
+
+%-----------ACHIEVEMENTS-----------
+
 \section{Academic Achievements \& Extra-Curricular}
 
-\begin{itemize}[leftmargin=0.2in]
+    \begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeItemListStart
+  \resumeItem{5th out of 100 teams in Open Innovation Field in IC HACK 2.0 $|$ \href{https://drive.google.com/file/d/1SeL0qU6O4hFTnG8Ef7F7ifKkHy5lRoSG/view?usp=sharing}{Certificate}}
+   \resumeItem{Claimed 80+ Skill Badges and 400+ Labs Completed $|$ \href{https://www.cloudskillsboost.google/public_profiles/27c0ba2b-577b-4d32-a506-64591e89e383}{GCP Profile}}
+  \resumeItem{500+ DSA Problems in \href{https://leetcode.com/tarunbisht-24/}{LeetCode}, \href{https://auth.geeksforgeeks.org/user/tarunbisht24}{GeeksforGeeks} \& \href{https://www.codingninjas.com/codestudio/profile/a5f5fd68-00b2-4d69-99c9-bfdcee24eee2}{CodeStudio}}
+  \resumeItem{4th out of 80 teams in Hackulus Hackathon $|$ \href{https://drive.google.com/file/d/18ciyyMktMdTX3gtiTdu328mGsj4R-QYG/view?usp=sharing}{Certificate}}
+  \resumeItem{747/10K+ in Codechef March Long Challenge 2022}
+  \resumeItem{AIR 29K out of 75K+ in CodeKaze June 2023 $|$ \href{https://drive.google.com/file/d/1mMD2lqFVsxjVfZL1JmhHwPu7hafmTqpd/view?usp=sharing}{Certificate}}
+  
+    \resumeItemListEnd
+    \end{itemize}
 
-  \achievementItem{5th out of 100 teams in Open Innovation Field in IC HACK 2.0 $|$ \href{https://drive.google.com/file/d/1SeL0qU6O4hFTnG8Ef7F7ifKkHy5lRoSG/view?usp=sharing}{Certificate}}
-  \achievementItem{Claimed 80+ Skill Badges and 400+ Labs Completed $|$ \href{https://www.cloudskillsboost.google/public_profiles/27c0ba2b-577b-4d32-a506-64591e89e383}{GCP Profile}}
-  \achievementItem{500+ DSA Problems in \href{https://leetcode.com/tarunbisht-24/}{LeetCode}, \href{https://auth.geeksforgeeks.org/user/tarunbisht24}{GeeksforGeeks} \& \href{https://www.codingninjas.com/codestudio/profile/a5f5fd68-00b2-4d69-99c9-bfdcee24eee2}{CodeStudio}}
-  \achievementItem{4th out of 80 teams in Hackulus Hackathon $|$ \href{https://drive.google.com/file/d/18ciyyMktMdTX3gtiTdu328mGsj4R-QYG/view?usp=sharing}{Certificate}}
-  \achievementItem{747/10K+ in Codechef March Long Challenge 2022}
-  \achievementItem{AIR 29K out of 75K+ in CodeKaze June 2023 $|$ \href{https://drive.google.com/file/d/1mMD2lqFVsxjVfZL1JmhHwPu7hafmTqpd/view?usp=sharing}{Certificate}}
-\end{itemize}
 
 
+% \runsubsection{Co-Curricular Activites}
+% \begin{tabular}{rll} \\
+% 1st & Regional Group Music Competiton\\
+% Gold Medal & District Level Cricket\\
+% \end{tabular}
+% \sectionsep
+
+%-------------------------------------------
 \end{document}
